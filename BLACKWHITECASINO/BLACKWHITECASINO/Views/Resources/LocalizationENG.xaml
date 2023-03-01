@@ -1,0 +1,102 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:BLACKWHITECASINO"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    
+    <v:String x:Key="LoginTitle">Log in/Registration</v:String>
+    <v:String x:Key="LoginLabel">Log in</v:String>
+    <v:String x:Key="LoginLogin">username</v:String>
+    <v:String x:Key="LoginPassword">password</v:String>
+    <v:String x:Key="LoginEnter">Let's spin!</v:String>
+    <v:String x:Key="LoginSwapRegistration">Registration</v:String>
+    <v:String x:Key="LoginForgot">Forgot password</v:String>
+
+    <v:String x:Key="RegLabel">Registration</v:String>
+    <v:String x:Key="RegLogin">username</v:String>
+    <v:String x:Key="RegEmail">email</v:String>
+    <v:String x:Key="RegPassword">password</v:String>
+    <v:String x:Key="RegMobile">mobile</v:String>
+    <v:String x:Key="RegBD">date of birth</v:String>
+    <v:String x:Key="RegEnter">pick up jackpot!</v:String>
+    <v:String x:Key="RegSwapLogin">log in</v:String>
+
+    <v:String x:Key="ForgotLabel">enter your email</v:String>
+    <v:String x:Key="ForgotLabel1">enter code and new password</v:String>
+
+    <v:String x:Key="Cancel">cancel</v:String>
+
+    <v:String x:Key="MWTitle">BLACK-WHITE CASINO Lobby</v:String>
+    <v:String x:Key="MWTotal">balance</v:String>
+    <v:String x:Key="MWDEp">deposit</v:String>
+    <v:String x:Key="MWConclusion">withdraw</v:String>
+    <v:String x:Key="MWUrBet">your bet</v:String>
+    <v:String x:Key="MWSPIN">spin</v:String>
+
+    <v:String x:Key="MWAcc">account</v:String>
+    <v:String x:Key="MWHelp">support</v:String>
+    <v:String x:Key="MWChange">сhange language</v:String>
+    <v:String x:Key="MWExit">exit :(</v:String>
+
+    <v:String x:Key="DoubleResult">result:</v:String>
+    <v:String x:Key="DoubleEven">e</v:String>
+    <v:String x:Key="DoubleNotEven">n</v:String>
+    <v:String x:Key="DoubleClear">clear</v:String>
+
+    <v:String x:Key="SlotUrBet">your bet</v:String>
+    <v:String x:Key="SlotJackpot">jackpot</v:String>
+    <v:String x:Key="SlotAuto">autobet</v:String>
+    <v:String x:Key="SlotSpinAll">spin all</v:String>
+    <v:String x:Key="SlotAnimOff">animation off</v:String>
+    <v:String x:Key="SlotDelayOff">delay off</v:String>
+
+    <v:String x:Key="MinesLvl1">difficulty</v:String>
+    <v:String x:Key="MinesLvl2">level</v:String>
+    <v:String x:Key="MinesEasy">easy</v:String>
+    <v:String x:Key="MinesHard">hard</v:String>
+    <v:String x:Key="MinesMB1">possible</v:String>
+    <v:String x:Key="MinesMB2">win</v:String>
+    <v:String x:Key="MinesUR1">your</v:String>
+    <v:String x:Key="MinesUR2">win</v:String>
+    <v:String x:Key="MinesTake">take</v:String>
+
+    <v:String x:Key="NineDop1">super</v:String>
+    <v:String x:Key="NineDop2">extra</v:String>
+    <v:String x:Key="NineDop3">try</v:String>
+    <v:String x:Key="NineDopYes">yes(-50%)</v:String>
+    <v:String x:Key="NineOst1">attempts</v:String>
+    <v:String x:Key="NineOst2">left</v:String>
+
+    <v:String x:Key="CWLabel">enter the bet amount</v:String>
+    <v:String x:Key="APWLabel">enter password</v:String>
+
+    <v:String x:Key="AWLabel">Admin panel</v:String>
+    <v:String x:Key="AWLogin">username</v:String>
+    <v:String x:Key="AWEmail">email</v:String>
+    <v:String x:Key="AWMobile">mobile</v:String>
+    <v:String x:Key="AWTotal">balance</v:String>
+    <v:String x:Key="AWGames">games</v:String>
+    <v:String x:Key="AWTran">transactions</v:String>
+    <v:String x:Key="AWBD">bd</v:String>
+    <v:String x:Key="AWDel">delete</v:String>
+    <v:String x:Key="AWBan">ban</v:String>
+    <v:String x:Key="AWUnBan">unban</v:String>
+
+    <v:String x:Key="AccLogin">username</v:String>
+    <v:String x:Key="AccEmail">email</v:String>
+    <v:String x:Key="AccPassword">password</v:String>
+    <v:String x:Key="AccMobile">mobile</v:String>
+    <v:String x:Key="AccBD">bd</v:String>
+    <v:String x:Key="AccChange">change</v:String>
+    <v:String x:Key="AccTabGames">games</v:String>
+    <v:String x:Key="AccTabTran">transactions</v:String>
+    <v:String x:Key="AccGName">game</v:String>
+    <v:String x:Key="AccGRes">result</v:String>
+    <v:String x:Key="AccGBet">bet</v:String>
+    <v:String x:Key="AccGProfit">profit</v:String>
+    <v:String x:Key="AccGDate">date</v:String>
+    <v:String x:Key="AccTOper">operation</v:String>
+    <v:String x:Key="AccTSumm">amount</v:String>
+    <v:String x:Key="AccTBB">balance before</v:String>
+    <v:String x:Key="AccTBF">balance after</v:String>
+    <v:String x:Key="AccTDate">date</v:String>
+</ResourceDictionary>

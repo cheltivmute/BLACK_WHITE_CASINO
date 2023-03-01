@@ -1,0 +1,84 @@
+﻿<Window x:Class="BLACKWHITECASINO.Views.Windows.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:vm="clr-namespace:BLACKWHITECASINO.ViewModels"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BLACKWHITECASINO.Views.Windows"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        Title="Панель администратора" 
+        Height="768" Width="1024" MinWidth="1024" MinHeight="768" MaxWidth="1920" MaxHeight="1080" x:Name="AdminWin">
+    <Window.DataContext>
+        <vm:AdminWindowViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="1*"></RowDefinition>
+                <RowDefinition Height="6*"></RowDefinition>
+
+
+            </Grid.RowDefinitions>
+
+            <Button Style="{DynamicResource RoundButtonTemplateCircle}" Command="{Binding ExitAdminCommand}" CommandParameter="{Binding ElementName=AdminWin}" Grid.Row="0" Grid.Column="4" Cursor="Hand" Margin="30,40">
+                <TextBlock FontSize="40" FontWeight="Bold">
+                X
+                </TextBlock>
+            </Button>
+
+            <Label Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Aqum" FontSize="45" Margin="0" Content="{DynamicResource AWLabel}"/>
+
+            <Grid Grid.Row="2" Grid.RowSpan="2" Grid.ColumnSpan="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.2*"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="0.2*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <DataGrid  Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="3" Background="White" FontFamily="Aqum" FontSize="25" AutoGenerateColumns="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ItemsSource="{Binding DataAdminItemsSource, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="False" SelectedItem="{Binding SelectedUser, UpdateSourceTrigger=PropertyChanged}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Width="50" Binding="{Binding DataAdminId}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="{DynamicResource AWLogin}" Width="*" Binding="{Binding DataAdminLogin}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="{DynamicResource AWEmail}" Width="*" Binding="{Binding DataAdminEmail}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="{DynamicResource AWMobile}" Width="*" Binding="{Binding DataAdminMobile}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="{DynamicResource AWTotal}" Width="*" Binding="{Binding DataAdminTotal}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="{DynamicResource AWGames}" Width="75" Binding="{Binding DataAdminGames}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="{DynamicResource AWTran}" Width="75" Binding="{Binding DataAdminTrans}"></DataGridTextColumn>
+                        <DataGridTextColumn Header="{DynamicResource AWBD}" Width="170" Binding="{Binding DataAdminBD}"></DataGridTextColumn>
+                    </DataGrid.Columns>
+                    
+                </DataGrid>
+                <Button Style="{DynamicResource RoundButtonTemplateCircle}" Command="{Binding DeleteUserCommand}" Grid.Row="2" Grid.Column="0" Cursor="Hand" Margin="10,5">
+                    <TextBlock FontSize="25" Text="{DynamicResource AWDel}"/>
+
+                </Button>
+                <Button Style="{DynamicResource RoundButtonTemplateCircle}" Command="{Binding BanUserCommand}" Grid.Row="2" Grid.Column="1" Cursor="Hand" Margin="10,5">
+                    <TextBlock FontSize="25" Text="{DynamicResource AWBan}" />
+
+                </Button>
+                <Button Style="{DynamicResource RoundButtonTemplateCircle}" Command="{Binding UnBanUserCommand}" Grid.Row="2" Grid.Column="2" Cursor="Hand" Margin="10,5">
+                    <TextBlock FontSize="25" Text="{DynamicResource AWUnBan}"/>
+
+                </Button>
+
+
+            </Grid>
+        </Grid>
+    </Grid>
+    
+</Window>

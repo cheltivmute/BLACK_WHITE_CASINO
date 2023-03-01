@@ -1,0 +1,30 @@
+﻿<Window x:Class="BLACKWHITECASINO.Views.Windows.DepositWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:BLACKWHITECASINO.ViewModels"
+        xmlns:local="clr-namespace:BLACKWHITECASINO.Views.Windows"
+        
+        mc:Ignorable="d" WindowStyle="None" BorderThickness="5"
+        Height="150" Width="400" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.ColumnSpan="3" Content="{Binding DepText, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Center" FontFamily="Aqum" FontSize="18"/>
+        <TextBox x:Name="depwit" Grid.Row="1" Grid.ColumnSpan="3" BorderThickness="2" HorizontalAlignment="Center" Margin="0,0,0,0" Text="{Binding CountBetValue, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Aqum" FontSize="14" BorderBrush="Black" Height="30" TextChanged="depwit_TextChanged"/>
+        <Button Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="2,2,1,2" Content="ок" HorizontalAlignment="Left" Margin="20,0,0,12" VerticalAlignment="Bottom" Width="175" BorderBrush="Black" Background="#FF88FF9A" FontFamily="Aqum" FontSize="10" Height="30" Command="{Binding AcceptApplicationCommand}"/>
+        <Button Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="1,2,2,2" Content="{DynamicResource Cancel}" HorizontalAlignment="Right" Margin="0,0,20,12" VerticalAlignment="Bottom" Width="175" BorderBrush="Black" Background="#FFFF8888" FontFamily="Aqum" FontSize="10" Height="30" Grid.Column="1" Command="{Binding CloseApplicationCommand}"/>
+    </Grid>
+</Window>
+

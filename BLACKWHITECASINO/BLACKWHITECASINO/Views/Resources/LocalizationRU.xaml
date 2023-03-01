@@ -1,0 +1,102 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:BLACKWHITECASINO"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+    
+    <v:String x:Key="LoginTitle">Вход/Регистрация</v:String>
+    <v:String x:Key="LoginLabel">Вход</v:String>
+    <v:String x:Key="LoginLogin">логин</v:String>
+    <v:String x:Key="LoginPassword">пароль</v:String>
+    <v:String x:Key="LoginEnter">ставки сделаны!</v:String>
+    <v:String x:Key="LoginSwapRegistration">регистрация</v:String>
+    <v:String x:Key="LoginForgot">забыли пароль</v:String>
+
+    <v:String x:Key="RegLabel">Регистрация</v:String>
+    <v:String x:Key="RegLogin">логин</v:String>
+    <v:String x:Key="RegEmail">почта</v:String>
+    <v:String x:Key="RegPassword">пароль</v:String>
+    <v:String x:Key="RegMobile">мобильный телефон</v:String>
+    <v:String x:Key="RegBD">датарождения</v:String>
+    <v:String x:Key="RegEnter">*** этого казино!</v:String>
+    <v:String x:Key="RegSwapLogin">вход</v:String>
+
+    <v:String x:Key="ForgotLabel">Введите вашу почту</v:String>
+    <v:String x:Key="ForgotLabel1">Введите код и новый пароль</v:String>
+    <v:String x:Key="Cancel">отмена</v:String>
+
+    <v:String x:Key="MWTitle">BLACK-WHITE CASINO Лобби</v:String>
+    <v:String x:Key="MWTotal">Баланс</v:String>
+    <v:String x:Key="MWDEp">депозит</v:String>
+    <v:String x:Key="MWConclusion">вывод</v:String>
+    <v:String x:Key="MWUrBet">ваша ставка</v:String>
+    <v:String x:Key="MWSPIN">запуск</v:String>
+    
+    <v:String x:Key="MWAcc">аккаунт</v:String>
+    <v:String x:Key="MWHelp">помощь</v:String>
+    <v:String x:Key="MWChange">сменить язык</v:String>
+    <v:String x:Key="MWExit">выход</v:String>
+
+    <v:String x:Key="DoubleResult">результат:</v:String>
+    <v:String x:Key="DoubleEven">ч</v:String>
+    <v:String x:Key="DoubleNotEven">н</v:String>
+    <v:String x:Key="DoubleClear">очистить</v:String>
+
+    <v:String x:Key="SlotUrBet">Ваша ставка</v:String>
+    <v:String x:Key="SlotJackpot">Джекпот</v:String>
+    <v:String x:Key="SlotAuto">автоставка</v:String>
+    <v:String x:Key="SlotSpinAll">вращать всё сразу</v:String>
+    <v:String x:Key="SlotAnimOff">выкл анимацию</v:String>
+    <v:String x:Key="SlotDelayOff">убрать задержку</v:String>
+
+    <v:String x:Key="MinesLvl1">уровень</v:String>
+    <v:String x:Key="MinesLvl2">сложности</v:String>
+    <v:String x:Key="MinesEasy">лёгкий</v:String>
+    <v:String x:Key="MinesHard">тяжёлый</v:String>
+    <v:String x:Key="MinesMB1">возможный</v:String>
+    <v:String x:Key="MinesMB2">выигрыш</v:String>
+    <v:String x:Key="MinesUR1">ваш</v:String>
+    <v:String x:Key="MinesUR2">выигрыш</v:String>
+    <v:String x:Key="MinesTake">забрать</v:String>
+
+    <v:String x:Key="NineDop1">дополни-</v:String>
+    <v:String x:Key="NineDop2">тельная</v:String>
+    <v:String x:Key="NineDop3">попытка</v:String>
+    <v:String x:Key="NineDopYes">да(-50%)</v:String>
+    <v:String x:Key="NineOst1">осталось</v:String>
+    <v:String x:Key="NineOst2">попыток</v:String>
+
+    <v:String x:Key="CWLabel">введите сумму ставки</v:String>
+    <v:String x:Key="APWLabel">введите пароль</v:String>
+
+    <v:String x:Key="AWLabel">Панель администратора</v:String>
+    <v:String x:Key="AWLogin">логин</v:String>
+    <v:String x:Key="AWEmail">почта</v:String>
+    <v:String x:Key="AWMobile">телефон</v:String>
+    <v:String x:Key="AWTotal">баланс</v:String>
+    <v:String x:Key="AWGames">игры</v:String>
+    <v:String x:Key="AWTran">транзакции</v:String>
+    <v:String x:Key="AWBD">д.р.</v:String>
+    <v:String x:Key="AWDel">Удалить</v:String>
+    <v:String x:Key="AWBan">Забанить</v:String>
+    <v:String x:Key="AWUnBan">Разбанить</v:String>
+
+    <v:String x:Key="AccLogin">логин</v:String>
+    <v:String x:Key="AccEmail">почта</v:String>
+    <v:String x:Key="AccPassword">пароль</v:String>
+    <v:String x:Key="AccMobile">телефон</v:String>
+    <v:String x:Key="AccBD">д.р.</v:String>
+    <v:String x:Key="AccChange">изменить</v:String>
+    <v:String x:Key="AccTabGames">игры</v:String>
+    <v:String x:Key="AccTabTran">транзакции</v:String>
+    <v:String x:Key="AccGName">игра</v:String>
+    <v:String x:Key="AccGRes">результат</v:String>
+    <v:String x:Key="AccGBet">ставка</v:String>
+    <v:String x:Key="AccGProfit">профит</v:String>
+    <v:String x:Key="AccGDate">дата</v:String>
+    <v:String x:Key="AccTOper">операция</v:String>
+    <v:String x:Key="AccTSumm">сумма</v:String>
+    <v:String x:Key="AccTBB">баланс до</v:String>
+    <v:String x:Key="AccTBF">баланс после</v:String>
+    <v:String x:Key="AccTDate">дата</v:String>
+
+</ResourceDictionary>

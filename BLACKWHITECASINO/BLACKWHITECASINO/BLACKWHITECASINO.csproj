@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>D:\Учёба\Курсач\Курсач2\BLACKWHITECASINO\BLACKWHITECASINO\Images\logoicoc.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Windows\bimba.png" />
+    <None Remove="Views\Windows\casino1.png" />
+    <None Remove="Views\Windows\casino2.png" />
+    <None Remove="Views\Windows\casino4 — копия.png" />
+    <None Remove="Views\Windows\casino433.png" />
+    <None Remove="Views\Windows\finish.png" />
+    <None Remove="Views\Windows\pick.png" />
+    <None Remove="Views\Windows\roll — копия.png" />
+    <None Remove="Views\Windows\start.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="MaterialDesignColors" Version="2.0.6" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.5.0" />
+    <PackageReference Include="MaterialDesignThemes.MahApps" Version="0.2.2" />
+    <PackageReference Include="MaterialDesignThemes.Wpf" Version="1.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.17">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\casino1.png" />
+    <Resource Include="Images\casino2.png" />
+    <Resource Include="Images\casino4 — копия.png" />
+    <Resource Include="Images\roll — копия.png" />
+    <Resource Include="Images\bimba.png" />
+    <Resource Include="Images\casino433.png" />
+    <Resource Include="Images\finish.png" />
+    <Resource Include="Images\start.png" />
+    <Resource Include="Images\pick.png" />
+  </ItemGroup>
+
+</Project>

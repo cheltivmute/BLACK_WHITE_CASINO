@@ -1,0 +1,104 @@
+﻿<Window x:Class="BLACKWHITECASINO.Views.Windows.Account"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:BLACKWHITECASINO.ViewModels"
+        xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+        xmlns:local="clr-namespace:BLACKWHITECASINO"
+        mc:Ignorable="d"
+        Title="{Binding Title}" 
+        Height="768" Width="1024" MinWidth="1024" MinHeight="768" MaxWidth="1920" MaxHeight="1080" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <vm:AccountWindowViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+
+            <RowDefinition Height="7*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="-10,0" Text="{DynamicResource AccLogin}" TextWrapping="Wrap" FontFamily="Aqum" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="25"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="-10,0" Text="{DynamicResource AccEmail}" TextWrapping="Wrap" FontFamily="Aqum" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="25"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Margin="-10,0" Text="{DynamicResource AccPassword}" TextWrapping="Wrap" FontFamily="Aqum" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="25"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Margin="-10,0" Text="{DynamicResource AccMobile}" TextWrapping="Wrap" FontFamily="Aqum" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="25"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Margin="-10,0" Text="{DynamicResource AccBD}" TextWrapping="Wrap" FontFamily="Aqum" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="25"/>
+
+        <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" BorderBrush="Black" BorderThickness="5" Margin="20,10,0,10" CornerRadius="5" Background="#FFDCFFDA">
+            <TextBlock Text="{Binding AccountLogin, UpdateSourceTrigger=PropertyChanged}" FontFamily="Arial Rounded MT Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" BorderBrush="Black" BorderThickness="5" Margin="20,10,0,10" CornerRadius="5" Background="#FFDCFFDA">
+            <TextBlock Text="{Binding AccountMail, UpdateSourceTrigger=PropertyChanged}" FontFamily="Arial Rounded MT Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+        </Border>
+        <Border Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" BorderBrush="Black" BorderThickness="5" Margin="20,10,0,10" CornerRadius="5" Background="#FFDCFFDA">
+            <TextBlock Text="{Binding AccountPassword, UpdateSourceTrigger=PropertyChanged}" FontFamily="Arial Rounded MT Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+        </Border>
+        <Border Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" BorderBrush="Black" BorderThickness="5" Margin="20,10,0,10" CornerRadius="5" Background="#FFDCFFDA">
+            <TextBlock Text="{Binding AccountMobile, UpdateSourceTrigger=PropertyChanged}" FontFamily="Arial Rounded MT Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+        </Border>
+        <Border Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" BorderBrush="Black" BorderThickness="5" Margin="20,10,0,10" CornerRadius="5" Background="#FFDCFFDA">
+            <TextBlock Text="{Binding AccountDate, UpdateSourceTrigger=PropertyChanged, StringFormat=dd.MM.yyyy}" FontFamily="Arial Rounded MT Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"></TextBlock>
+        </Border>
+
+        <Button Style="{DynamicResource RoundButtonTemplateLow}" Command="{Binding ChangeLoginCommand}" Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="2" Margin="10" FontSize="30" Content="{DynamicResource AccChange}"></Button>
+        <Button Style="{DynamicResource RoundButtonTemplateLow}" Command="{Binding ChangeMailCommand}" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Margin="10" FontSize="30" Content="{DynamicResource AccChange}"></Button>
+        <Button Style="{DynamicResource RoundButtonTemplateLow}" Command="{Binding ChangePasswordCommand}" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" Margin="10" FontSize="30" Content="{DynamicResource AccChange}"></Button>
+        <Button Style="{DynamicResource RoundButtonTemplateLow}" Command="{Binding ChangeMobileCommand}" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2" Margin="10" FontSize="30" Content="{DynamicResource AccChange}"></Button>
+        <Button Style="{DynamicResource RoundButtonTemplateLow}" Command="{Binding ChangeBDCommand}" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2" Margin="10" FontSize="30" Content="{DynamicResource AccChange}"></Button>
+
+        <TabControl Grid.Row="5" Grid.ColumnSpan="6" BorderBrush="White" Background="White" BorderThickness="0" Margin="-1,19,-1,0">
+            <TabItem Header="{DynamicResource AccTabGames}" Cursor="Hand" BorderBrush="White" FontFamily="Aqum" FontSize="25" Width="767" Margin="0,-2,0,0" Height="40">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="GamesGrid" Grid.ColumnSpan="2" Background="White" AutoGenerateColumns="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ItemsSource="{Binding DataItemsSource, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" Width="50" Binding="{Binding DataGameId}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="{DynamicResource AccGName}" Width="*" Binding="{Binding DataGameName}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="{DynamicResource AccGBet}" Width="*" Binding="{Binding DataGameBet}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="{DynamicResource AccGRes}" Width="*" Binding="{Binding DataGameResult}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="{DynamicResource AccGProfit}" Width="*" Binding="{Binding DataGameProfit}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="{DynamicResource AccGDate}" Width="170" Binding="{Binding DataGameDate}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+                
+            </TabItem>
+            <TabItem Header="{DynamicResource AccTabTran}" Cursor="Hand" BorderBrush="White" FontFamily="Aqum" FontSize="25" Width="767" Margin="0,-2,0,0" Height="40" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="TrunGrid" Grid.ColumnSpan="2" Background="White"  AutoGenerateColumns="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" ItemsSource="{Binding DataTranItemsSource, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="False"> 
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" Width="50" Binding="{Binding DataTranId}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="{DynamicResource AccTOper}" Width="0.75*" Binding="{Binding DataTranOperation}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="{DynamicResource AccTSumm}" Width="0.65*" Binding="{Binding DataTranSumm}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="{DynamicResource AccTBB}" Width="0.85*" Binding="{Binding DataTranTotalBef}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="{DynamicResource AccTBF}" Width="*" Binding="{Binding DataTranTotalAf}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="{DynamicResource AccTDate}" Width="170" Binding="{Binding DataTranDate}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        <Border Grid.Row="4" Grid.ColumnSpan="6" BorderBrush="black" BorderThickness="0,0,0,10" Margin="0,0,0,-20" ></Border>
+    </Grid>
+</Window>
